@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="ShareAudio_WinUi3.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ShareAudio_WinUi3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Share Audio">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="AppTitleBar" Height="46">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="TitleBarIcon" Source="ms-appx:///Assets/StoreLogo.png"
+               Grid.Column="1"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Width="24" Height="24"
+               Margin="12,3,0,0"/>
+            <TextBlock x:Name="TitleBarTextBlock" 
+               Text="Share Audio" 
+               FontSize="13"
+               Style="{StaticResource CaptionTextBlockStyle}"
+               Grid.Column="1"
+               VerticalAlignment="Center"
+               Margin="50,0,0,0"/>
+        </Grid>
+        <NavigationView x:Name="MyNavigationView" Loaded="MyNavigationView_Loaded" SelectionChanged="MyNavigationView_SelectionChanged" Grid.Row="1" IsSettingsVisible="False" IsBackButtonVisible="Collapsed"  IsBackEnabled="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="ConnetionIcon" Icon="Home" Content="Connection" Tag="ConnectionManager" />
+                <NavigationViewItem Icon="Save" Content="Record" Tag="RecordManager" />
+            </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Icon="Help" Content="Info" Tag="Info" />
+            </NavigationView.FooterMenuItems>
+            <Frame x:Name="ContentFrame" Margin="10 10 10 10"/>
+        </NavigationView>
+    </Grid>
+</Window>

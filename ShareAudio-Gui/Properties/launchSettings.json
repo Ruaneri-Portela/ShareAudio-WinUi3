@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ShareAudio-WinUi3 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ShareAudio-WinUi3 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
