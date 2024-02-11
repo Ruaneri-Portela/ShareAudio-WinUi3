@@ -29,7 +29,7 @@ The binary is available in the release section, download it and enjoy!
 
 ## Usage
 
-1. Download the pre-built binary from the [release section](https://github.com/your-username/ShareAudio-WinUi3/releases).
+1. Download the pre-built binary from the [release section](https://github.com/Ruaneri-Portela/ShareAudio-WinUi3/releases).
 
 2. Execute the ShareAudio WinUi3 Wrapper.
 
